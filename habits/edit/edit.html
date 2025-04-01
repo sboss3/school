@@ -51,6 +51,33 @@
             </li>
         </ul>
     </nav>
+    <h1>Habit Configuration</h1>
+    <div>
+        <div>
+            <input type="text" value="{good_habit}">
+            <label>
+                Enable rewards for this habit
+                <input type="checkbox" id="rewards_checkbox">
+            </label> 
+        </div>
+        <div>
+            <input type="text" value="{bad_habit}">
+            <label>
+                Enable penalties for this habit
+                <input type="checkbox" id="penalties_checkbox">
+            </label> 
+        </div>
+    </div>
+    <h2>Streaks</h2>
+    <input
+        type="range"
+        id="streak_length"
+        min="0"
+        max="90"
+        value="30"
+        step="1"
+    />
+    <label for="streak_length">Streak length</label>
     <p>&copy; Samuel Bossé | Code last modified {date}</p>
 </body>
 </html>
