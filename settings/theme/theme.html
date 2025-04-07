@@ -51,6 +51,29 @@
             </li>
         </ul>
     </nav>
+    <h1>Settings</h1>
+    <h2>Theme</h2>
+    <form>
+        <label for="main_colour">Main Colour</label>
+        <input type="color" name="main_colour">
+        <label for="accent_colour">Accent Colour</label>
+        <input type="color" name="accent_colour">
+        <label>
+            Dark Mode
+            <input type="checkbox" name="display mode">
+        </label>
+        <label for="font_family">Font</label>
+        <input type="text" name="font_family" placeholder="Your font here...">
+        <label for="font_size">Font Size</label>
+        <input
+            type="range"
+            name="font_size"
+            min="25"
+            max="200"
+            value="100"
+            step="10"
+        />
+    </form>
     <p>&copy; Samuel Bossé | Code last modified {date}</p>
 </body>
 </html>
