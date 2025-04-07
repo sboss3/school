@@ -51,6 +51,31 @@
             </li>
         </ul>
     </nav>
+    <h1>Habit Configuration (global)</h1>
+    <div>
+        <div>
+            <label>
+                <input type="checkbox" id="rewards_checkbox"/>
+                Enable rewards by default
+            </label> 
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" id="penalties_checkbox"/>
+                Enable penalties by default
+            </label> 
+        </div>
+    </div>
+    <h2>Streaks</h2>
+    <input
+        type="range"
+        id="streak_length"
+        min="0"
+        max="90"
+        value="30"
+        step="1"
+    />
+    <label for="streak_length">Default streak length</label>
     <p>&copy; Samuel Bossé | Code last modified {date}</p>
 </body>
 </html>
