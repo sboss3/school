@@ -76,6 +76,12 @@
         step="1"
     />
     <label for="streak_length">Default streak length</label>
+    <label>
+        <input type="checkbox" id="streak_break"/>
+        Break streak on bad habit by default
+    </label>
+    <input type="number" id="num_bad_for_break" min="1" max="3" placeholder="1">
+    <label for="num_bad_for_break">Number of bad habits to break a streak</label>
     <p>&copy; Samuel Bossé | Code last modified {date}</p>
 </body>
 </html>
