@@ -1,0 +1,119 @@
+:root {
+    /* Typography */
+    --font-xl: 3rem;
+    --font-lg: 2.5rem;
+    --font-md: 2rem;
+    --font-base: 1.5rem;
+    --font-sm: 1.25rem;
+    --font-xs: 1rem;
+    --font-xxs: 0.75rem;
+    --font-primary: rgb(43, 65, 98);
+    --font-shadow:
+        -2px -8px 12px rgb(255,255,255),
+        4px 4px 12px rgba(0,0,0,0.2);
+
+    /* Colours */
+    --primary: hsl(46, 91%, 95%);
+    --primary-dark: hsl(46, 91%, 92%);
+    --primary-100: #C5CAD1;
+    --secondary: #D1CFCF;
+
+    /* Content */
+    --radius: 1rem;
+    --content-width: clamp(310px, 500px, 900px);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Krona One", sans-serif;
+    text-align: center;
+    font-size: var(--font-base);
+    background:  var(--primary);
+    color: var(--font-primary);
+    text-shadow: var(--font-shadow);
+}
+
+nav {
+    z-index: 50;
+    position: fixed;
+    bottom: 25px;
+    border-radius: 25px;
+    background-color: var(--primary);
+    box-shadow:
+        12px 12px 16px 0 #E8DCC590,
+        -8px -8px 12px 0 #ffffff75,
+        12px 12px 16px 0 #F7ECDD50 inset,
+        -8px -8px 12px 0 #E8DCC550 inset;
+}
+
+nav ul {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-block: 5px;
+    margin-inline: 15px;
+}
+
+nav svg {
+    filter: drop-shadow(4px 4px 12px rgba(0,0,0,0.2));
+}
+
+#date-modified {
+    z-index: -1;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: var(--font-xxs);
+    opacity: 0.3;
+    align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --font-xl: 2.25rem;
+        --font-lg: 2rem;
+        --font-md: 1.5rem;
+        --font-base: 1.25rem;
+        --font-sm: 1rem;
+        --font-xs: 0.75rem;
+        --font-xxs: 0.5rem;
+
+        --content-width: clamp(310px, 350px, 500px);
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        --font-xl: 1.75rem;
+        --font-lg: 1.5rem;
+        --font-md: 1.25rem;
+        --font-base: 1rem;
+        --font-sm: 0.9rem;
+        --font-xs: 0.75rem;
+
+        --content-width: clamp(275px, 290px, 400px);
+    }
+
+    nav svg {
+        width: 20px;
+    }
+}
+
+@media (max-width: 370px) {
+    :root {
+        --content-width: clamp(290px, 300px, 400px);
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+}
