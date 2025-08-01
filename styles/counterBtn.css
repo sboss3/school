@@ -10,6 +10,7 @@
   border-radius: 100%;
   position: relative;
   transition: .3s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .counter-btn .back {
