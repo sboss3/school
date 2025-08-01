@@ -1,0 +1,14 @@
+@import url(../../styles/styles.css);
+
+h3 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    font-size: var(--font-xs);
+}
+
+th, td {
+    padding: 8px 12px;
+}
