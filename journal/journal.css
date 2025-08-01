@@ -1,0 +1,54 @@
+@import url(../styles/styles.css);
+
+section {
+    width: var(--content-width);
+    text-align: left;
+}
+
+#journal-input {
+    border: none;
+    margin: 0;
+    font: inherit;
+    resize: vertical;
+    outline: none;
+    display: block;
+    width: calc(var(--content-width) - 50px);
+    height: 150px;
+    padding: 25px;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    box-shadow: 
+        3px 3px 6px #bebebe inset,
+        -3px -3px 6px #ffffff75 inset;
+    text-shadow: none;
+    font-size: var(--font-xxs);
+    color: var(--font-primary);
+    opacity: 0.75;
+}
+
+#journal-input::-webkit-resizer {
+    opacity: 0;
+}
+
+#search {
+    border: none;
+    margin: 0;
+    font: inherit;
+    resize: vertical;
+    outline: none;
+    display: block;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    text-shadow: none;
+    font-size: var(--font-xxs);
+    color: var(--font-primary);
+    opacity: 0.75;
+}
+
+#search:focus-within {
+    padding: 15px;
+    transition: box-shadow ease-in 150ms;
+    box-shadow: 
+        3px 3px 6px #bebebe inset,
+        -3px -3px 6px #ffffff75 inset;
+}

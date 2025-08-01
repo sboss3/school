@@ -1,0 +1,6 @@
+@import url(../styles/styles.css);
+
+section {
+    width: var(--content-width);
+    text-align: left;
+}

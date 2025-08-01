@@ -1,0 +1,71 @@
+@import url(../styles/styles.css);
+
+img {
+    border-radius: var(--radius);
+    box-shadow: 
+        6px 6px 10px 0 #E8DCC5,
+        -8px -8px 8px 0 #fffcf2,
+        6px 6px 10px 0 #fffcf2 inset,
+        -4px -4px 8px 0 #E8DCC5 inset;
+    margin-bottom: 25px;
+    max-width: 90vw;
+}
+
+p {
+    max-width: 750px;
+    font-size: var(--font-xs);
+    margin-bottom: 75px;
+}
+
+#introduction {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    min-width: 60vw;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div h3 {
+    align-self: flex-start;
+}
+
+main, section, p {
+    text-align: left;
+}
+
+section {
+    margin-top: 75px;
+    min-width: 50vw;
+    max-width: 90vw;
+}
+
+section h3{
+    text-align: center;
+}
+
+section ul {
+    padding-inline: 5vw;
+}
+
+@media (max-width: 860px) {
+    p {
+        max-width: 90vw;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main div h3 {
+        align-self: center;
+    }
+}
