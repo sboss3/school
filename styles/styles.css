@@ -117,3 +117,7 @@ nav svg {
         margin: 10px;
     }
 }
+
+@view-transition {
+    navigation: auto;
+}
