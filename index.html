@@ -33,29 +33,29 @@
         </ul>
     </nav>
     <div id="streak">
-        <span>Streak: 10 days</span>
-        <span>Goal: 21 days</span>
-        <progress id="streak-bar" max="21" value="10"></progress>
+        <span>Streak: <span id="current_streak">10</span> days</span>
+        <span>Goal: <span id="streak_goal">21</span> days</span>
+        <progress id="streak_bar" max="254" value="66"></progress>
     </div>
     <main>
         <div>
-            <span class="habit-count">2</span>
-            <p class="habit-label">Fast food</p> 
-            <button class="counter-btn bad-btn">
+            <span id="bad_count" class="habit-count">2</span>
+            <p id="bad_label" class="habit-label">Fast food</p>
+            <button id="bad_btn" class="counter-btn bad-btn">
                 <!-- Button from Uiverse.io by catraco -->
                 <span class="back"></span>
                 <span class="front"></span>
             </button>
         </div>
         <label id="addition-subtraction">
-            <input type="checkbox" name="addition-toggle">
+            <input type="checkbox" id="addition_toggle" name="addition-toggle">
             <span id="plus"></span>
             <span id="minus"></span>
         </label>
         <div>
-            <span class="habit-count">3</span>
-            <p class="habit-label">Gym</p>
-            <button class="counter-btn good-btn">
+            <span id="good_count" class="habit-count">3</span>
+            <p id="good_label" class="habit-label">Gym</p>
+            <button id="good_btn" class="counter-btn good-btn">
                 <!-- Button from Uiverse.io by catraco -->
                 <span class="back"></span>
                 <span class="front"></span>
@@ -63,9 +63,11 @@
         </div>
     </main>
     <section id="journal">
-        <h2>Today's Reflections</h2>
+        <h2><label for="journal_input">Today's Reflections</label></h2>
         <textarea id="journal_input" placeholder="Type something..."></textarea>
     </section>
-    <p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-06-10</p>
+    <p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-20</p>
+    <script src="./js/dbinit.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

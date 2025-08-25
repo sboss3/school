@@ -1,22 +1,12 @@
 @import url(../styles/styles.css);
 @import url(../styles/search.css);
 
+#current_habits {
+    display: block;
+    margin-bottom: 30px;
+}
+
 section {
     width: var(--content-width);
     text-align: left;
-}
-
-#search {
-    border: none;
-    margin: 0;
-    font: inherit;
-    resize: vertical;
-    outline: none;
-    display: block;
-    border-radius: var(--radius);
-    background-color: var(--primary);
-    text-shadow: none;
-    font-size: var(--font-xxs);
-    color: var(--font-primary);
-    opacity: 0.75;
 }

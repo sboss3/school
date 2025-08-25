@@ -35,11 +35,11 @@
 <h1>Habits</h1>
 <section>
     <h2>Now</h2>
-    <a href="./edit/edit.html">{current_habit_pair}</a>
+    <a id="current_habits" href="./edit/edit.html">{current_habit_pair}</a>
 </section>
-<section>
+<section id="acquired">
     <h2>Acquired Habits</h2>
-    <ul>
+    <ul id="list">
         <li>
             <a href="../statistics/habit/habit.html">{old_habit_pair}</a>
         </li>
@@ -51,6 +51,8 @@
         </li>
     </ul>
 </section>
-<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-04-07</p>
+<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-22</p>
+<script src="../js/dbinit.js"></script>
+<script src="./habits.js"></script>
 </body>
 </html>
