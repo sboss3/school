@@ -1,4 +1,4 @@
-const data = [
+let data = [
     { date: "2025-08-01" },
     { date: "2025-08-02" },
     { date: "2024-07-01" },
@@ -26,25 +26,18 @@ const list = document.getElementById("list");
 
 const searchData = (search_term) => {
     list.innerHTML = "";
-    data
-        .filter((entry) => {
+    data.filter((entry) => {
             return (
-                (entry.date
-                    ? entry.date.toLowerCase().includes(search_term)
-                    : console.log("This entry has no date field")
-                )
+                (entry.date ? entry.date.toLowerCase().includes(search_term) : console.log("This entry has no date field"))
                 ||
-                (entry.name
-                    ? entry.name.toLowerCase().includes(search_term)
-                    : console.log("This entry has no name field")
-                )
+                (entry.name ? entry.name.toLowerCase().includes(search_term) : console.log("This entry has no name field"))
             );
         })
         .forEach((entry) => {
             const li = document.createElement("li");
             const a = document.createElement("a");
             a.innerHTML = entry.name ? entry.name : entry.date;
-            a.href = "../statistics/habit/habit.html";
+            a.href = window.location.href.includes("statistics") ? "./habit/habit.html" : "../journal/entry/entry.html";
             li.appendChild(a);
             list.appendChild(li);
         });

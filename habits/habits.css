@@ -4,3 +4,12 @@ section {
     width: var(--content-width);
     text-align: left;
 }
+
+#acquired {
+    margin-top: 30px;
+}
+
+#list li {
+    font-size: var(--font-sm);
+    padding-block: 7px;
+}

@@ -5,7 +5,7 @@ section {
     text-align: left;
 }
 
-#journal-input {
+#journal_input {
     border: none;
     margin: 0;
     font: inherit;
@@ -26,6 +26,6 @@ section {
     opacity: 0.75;
 }
 
-#journal-input::-webkit-resizer {
+#journal_input::-webkit-resizer {
     opacity: 0;
 }

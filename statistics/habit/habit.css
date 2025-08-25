@@ -1,10 +1,11 @@
 @import url(../../styles/styles.css);
 
-h3 {
-    margin: 0;
+#canvas_container {
+    width: var(--content-width);
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
     font-size: var(--font-xs);
 }
