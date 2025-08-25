@@ -22,12 +22,7 @@ form {
     text-align: left;
 }
 
-.input_group {
-    display: flex;
-    gap: 30px;
-}
-
-.input_group div, .column {
+.column {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -102,6 +97,7 @@ label {
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
+    min-width: 250px;
     height: 35px;
     margin: 0;
     border-radius: var(--radius);

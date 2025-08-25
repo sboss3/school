@@ -33,45 +33,30 @@
     </ul>
 </nav>
 <h1>Habit Configuration</h1>
-<h6>(override)</h6>
-<form>
+<h6>Create or edit habit pair</h6>
+<form id="habit_form">
     <div class="input_group">
         <div>
             <label for="good_habit">Good Habit</label>
-            <input type="text" id="good_habit" class="habit_name" value="{good_habit}"/>
+            <input type="text" id="good_habit" class="habit_name"/>
         </div>
         <div>
             <label for="bad_habit">Bad Habit</label>
-            <input type="text" id="bad_habit" class="habit_name" value="{bad_habit}">
+            <input type="text" id="bad_habit" class="habit_name">
         </div>
     </div>
-    <div class="check">
-        <label>
-            Enable penalties for this habit
-            <input type="checkbox" id="penalties_checkbox"/>
-            <span class="checkmark"></span>
-        </label>
-    </div>
-    <div class="check">
-        <label>
-            Enable rewards for this habit
-            <input type="checkbox" id="rewards_checkbox"/>
-            <span class="checkmark"></span>
-        </label>
-    </div>
-    <h4>Streaks</h4>
     <label for="streak_length">Streak length</label>
     <input
             type="range"
             id="streak_length"
             min="21"
             max="254"
-            value="30"
+            value="66"
             step="1"
     />
     <div class="check">
         <label>
-            Break streak on bad habit
+            Bad habit breaks streak
             <input type="checkbox" id="streak_break"/>
             <span class="checkmark"></span>
         </label>
@@ -79,6 +64,8 @@
     <label for="num_bad_for_break">Number of bad habits to break a streak</label>
     <input type="number" id="num_bad_for_break" min="1" max="3" placeholder="1">
 </form>
-<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-04-07</p>
+<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-14</p>
+<script src="../../js/dbinit.js"></script>
+<script src="./edit.js"></script>
 </body>
 </html>

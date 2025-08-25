@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./habit.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>{HabitName}</title>
 </head>
 <body>
@@ -33,13 +34,12 @@
     </ul>
 </nav>
 <h1>Statistics</h1>
-<h3>Good Habit | Bad Habit</h3>
-<canvas id="myChart"></canvas> <!-- For use with charting library in later unit -->
-<table> <!-- I have filled out this table for now but in "production" it will be filled out with the user's data using JavaScript -->
+<div id="canvas_container"><canvas id="chart"></canvas></div>
+<table id="stats_table">
     <tr>
         <th>Date</th>
-        <th>{num}</th>
-        <th>{num}</th>
+        <th>Good</th>
+        <th>Bad</th>
         <th>Streak Maintained</th>
     </tr>
     <tr>
@@ -61,6 +61,8 @@
         <td>Yes</td>
     </tr>
 </table>
-<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-04-07</p>
+<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-23</p>
+<script src="../../js/dbinit.js"></script>
+<script src="./habit.js"></script>
 </body>
 </html>

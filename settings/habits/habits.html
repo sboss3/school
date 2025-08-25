@@ -33,34 +33,18 @@
     </ul>
 </nav>
 <h1>Settings</h1>
-<form>
+<form id="habit_form">
     <div>
         <h2>Habits</h2>
         <h6>(default settings)</h6>
-    </div>
-    <div class="input_group">
-        <div class="check">
-            <label>
-                Enable rewards
-                <input type="checkbox" id="rewards_checkbox"/>
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <div class="check">
-            <label>
-                Enable penalties
-                <input type="checkbox" id="penalties_checkbox"/>
-                <span class="checkmark"></span>
-            </label>
-        </div>
     </div>
     <div class="column">
         <label for="streak_length">Streak length</label>
         <input
                 type="range"
                 id="streak_length"
-                min="0"
-                max="90"
+                min="21"
+                max="254"
                 value="30"
                 step="1"
         />
@@ -77,6 +61,8 @@
         <input type="number" id="num_bad_for_break" min="1" max="3" placeholder="1">
     </div>
 </form>
-<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-04-07</p>
+<p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-24</p>
+<script src="../../js/dbinit.js"></script>
+<script src="./habits.js"></script>
 </body>
 </html>
