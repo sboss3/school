@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$(document).ready(() => {
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     OpenDB.onerror = () => {
@@ -15,6 +15,8 @@ window.addEventListener("load", () => {
 
         habitQuery.onsuccess = () => {
             const habit = habitQuery.result;
+
+            $('title').text(habit.goodName + ' | ' + habit.badName);
 
             const table = document.getElementById('stats_table');
             const statsStore = db.transaction('dailyStats', 'readonly').objectStore('dailyStats');

@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$(document).ready(() => {
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     OpenDB.onerror = () => {
@@ -36,14 +36,14 @@ window.addEventListener("load", () => {
                     };
 
                     dailyStatsStore.add(stats).onsuccess = () => {
-                        document.getElementById('bad_btn').addEventListener('click', () => {
+                        $('#bad_btn').click(() => {
                             let good = false;
                             let addition = !document.getElementById('addition_toggle').checked;
                             updateHabitCount(db, good, addition, (updatedData) => {
                                 updateStreakData(db, streakBroken(habit, updatedData), today);
                             });
                         });
-                        document.getElementById('good_btn').addEventListener('click', () => {
+                        $('#good_btn').click(() => {
                             let good = true;
                             let addition = !document.getElementById('addition_toggle').checked;
                             updateHabitCount(db, good, addition, () => {});
@@ -68,14 +68,14 @@ window.addEventListener("load", () => {
                         }
                     };
                 } else {
-                    document.getElementById('bad_btn').addEventListener('click', () => {
+                    $('#bad_btn').click(() => {
                         let good = false;
                         let addition = !document.getElementById('addition_toggle').checked;
                         updateHabitCount(db, good, addition, (updatedData) => {
                             updateStreakData(db, streakBroken(habit, updatedData), today);
                         });
                     });
-                    document.getElementById('good_btn').addEventListener('click', () => {
+                    $('#good_btn').click(() => {
                         let good = true;
                         let addition = !document.getElementById('addition_toggle').checked;
                         updateHabitCount(db, good, addition, () => {});
@@ -230,7 +230,16 @@ function updateStreakData (db, streakBroken, date) {
                             displayStreakData(habit);
 
                             if (streakGoalReached(habit)) {
-                                closeHabit(db)
+                                $('#popup_background').fadeIn(() => {
+                                    confetti({
+                                        particleCount: 100,
+                                        spread: 70,
+                                        origin: { y: 0.6 },
+                                    });
+                                    $('#popup').fadeIn().delay(2300).fadeOut();
+                                }).delay(3000).fadeOut(() => {
+                                    closeHabit(db);
+                                });
                             }
                         };
                     };

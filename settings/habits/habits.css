@@ -93,10 +93,14 @@ label {
     transform: rotate(45deg);
 }
 
+div:has(input[type="range"]) {
+    width: 100%;
+}
+
 /* Range slider styles adapted from https://nikitahl.com/style-range-input-css */
 input[type="range"] {
     -webkit-appearance: none;
-    width: 100%;
+    width: 50%;
     min-width: 250px;
     height: 35px;
     margin: 0;
@@ -130,6 +134,11 @@ input[type="range"]::-moz-range-thumb {
             4px 4px 8px #bebebe,
             -4px -4px 8px #ffffff95;
     cursor: pointer;
+}
+
+#streak_length_display {
+    display: block;
+    margin: 15px;
 }
 
 input[type="number"] {

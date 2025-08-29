@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/confetti.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -66,6 +68,11 @@
         <h2><label for="journal_input">Today's Reflections</label></h2>
         <textarea id="journal_input" placeholder="Type something..."></textarea>
     </section>
+    <div id="popup_background"></div>
+    <div id="popup">
+        <h1>Congratulations!</h1>
+        <p>You successfully acquired a new habit!!</p>
+    </div>
     <p id="date-modified">&copy; Samuel Bossé | Code last modified 2025-08-20</p>
     <script src="./js/dbinit.js"></script>
     <script src="./index.js"></script>
