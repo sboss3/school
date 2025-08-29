@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$(document).ready(() => {
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     const form = document.getElementById('habit_form');
@@ -122,6 +122,7 @@ function editHabit (db, input, value) {
                 break;
             case "streak_length":
                 habit.streakLengthDays = +value;
+                $('#streak_length_display').text(value);
                 break;
             case "streak_break":
                 habit.breakStreakOnBad = input.checked ? 1 : 0;
@@ -151,6 +152,7 @@ function updateHabitForm (habit, inputs) {
                 break;
             case "streak_length":
                 input.value = habit.streakLengthDays;
+                $('#streak_length_display').text(habit.streakLengthDays);
                 break;
             case "streak_break":
                 input.checked = habit.breakStreakOnBad === 1;

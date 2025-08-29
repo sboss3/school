@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$(document).ready(() => {
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     OpenDB.onerror = () => {
@@ -27,6 +27,7 @@ window.addEventListener("load", () => {
 function displayJournal (textarea, header, journal) {
     header.innerHTML = journal.date;
     textarea.value = journal.content;
+    $('title').text(journal.date);
 }
 
 function editJournalContent (db, textarea, header, date, content) {

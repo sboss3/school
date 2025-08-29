@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./habits.css">
+    <script src="../../scripts/jquery.js"></script>
     <title>Global Habits Configuration</title>
 </head>
 <body>
@@ -38,14 +39,15 @@
         <h2>Habits</h2>
         <h6>(default settings)</h6>
     </div>
-    <div class="column">
+    <div>
         <label for="streak_length">Streak length</label>
+        <span id="streak_length_display"></span>
         <input
                 type="range"
                 id="streak_length"
                 min="21"
                 max="254"
-                value="30"
+                value="66"
                 step="1"
         />
     </div>

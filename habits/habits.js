@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+$(document).ready(() => {
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     OpenDB.onerror = () => {
