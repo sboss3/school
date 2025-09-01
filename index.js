@@ -1,4 +1,16 @@
 $(document).ready(() => {
+    $.ajax({
+        url: 'https://zenquotes.io/api/today',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data.message);
+        },
+        error: function() {
+            alert('Something went wrong!');
+        }
+    });
+
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
     OpenDB.onerror = () => {
