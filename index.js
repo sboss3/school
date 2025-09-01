@@ -1,21 +1,6 @@
 $(document).ready(() => {
-    $.ajax({
-        url: "https://api.allorigins.win/get?url=" + encodeURIComponent("https://zenquotes.io/api/today"),
-        method: "GET",
-        success: function(response) {
-            const data = JSON.parse(response.contents);
-            localStorage.setItem("dailyQuote", data[0].h);
-            $("#quote").html(data[0].h);
-        },
-        error: function(xhr, status, error) {
-            console.error("Error fetching quote:", error);
-            $("#quote").text("Could not load quote.");
-        }
-    });
-
     const savedQuote = localStorage.getItem("dailyQuote");
     $("#quote").html(savedQuote);
-
 
     const OpenDB = window.indexedDB.open('HabitCounter', 3);
 
